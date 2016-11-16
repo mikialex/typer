@@ -9,6 +9,7 @@ var typer = function() {
     this.aim = document.getElementById("aim");
     this.current = document.getElementById("current");
 
+
     this.canvas = document.getElementById("can");
     this.canvas.height = 500;
     this.canvas.width = 1000;
@@ -45,7 +46,7 @@ typer.prototype = {
 
 typer.prototype.generateMixed = function(n) {
     var res = "";
-    for (var i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
         var id = Math.ceil(Math.random() * 35);
         res += chars[id];
     }
@@ -53,14 +54,14 @@ typer.prototype.generateMixed = function(n) {
 }
 
 typer.prototype.genNewString = function(container) {
-    for (i = 0; i <= 19; i++) {
+    for (let i = 0; i <= 19; i++) {
         container[i] = chars[Math.ceil(Math.random() * 35)];
     }
 }
 
 typer.prototype.genStringOut = function(container) {
     var s = "";
-    for (i = 0; i <= 19; i++) {
+    for (let i = 0; i <= 19; i++) {
         s = s + container[i];
     }
     return s;
